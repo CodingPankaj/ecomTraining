@@ -4,6 +4,7 @@ import { AppLayout } from "./common/AppLayout";
 import { Shop } from "./pages/Shop";
 import { Cart } from "./pages/Cart";
 import { MainContextProvider } from "./context/MainContext";
+import { ErrorPage } from "./pages/ErrorPage";
 
 function App() {
   const allRoutes = createBrowserRouter([
@@ -19,13 +20,17 @@ function App() {
           path: "/cart",
           element: <Cart />,
         },
+        {
+          path: "*",
+          element: <ErrorPage />,
+        },
       ],
     },
   ]);
 
   return (
     <MainContextProvider>
-      <RouterProvider router={allRoutes} />;
+      <RouterProvider router={allRoutes} />
     </MainContextProvider>
   );
 }

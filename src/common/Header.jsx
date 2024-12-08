@@ -19,16 +19,44 @@ export const Header = () => {
         <nav className="hidden items-center justify-between md:flex">
           <ul className="flex items-center gap-5 text-lg font-medium">
             <li>
-              <NavLink>Home</NavLink>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive ? "font-semibold text-blue-600" : ""
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink>Shop</NavLink>
+              <NavLink
+                to={"/shop"}
+                className={({ isActive }) =>
+                  isActive ? "font-semibold text-blue-600" : ""
+                }
+              >
+                Shop
+              </NavLink>
             </li>
             <li>
-              <NavLink>Cart</NavLink>
+              <NavLink
+                to={"/cart"}
+                className={({ isActive }) =>
+                  isActive ? "font-semibold text-blue-600" : ""
+                }
+              >
+                Cart
+              </NavLink>
             </li>
             <li>
-              <NavLink>Checkout</NavLink>
+              <NavLink
+                to={"/checkout"}
+                className={({ isActive }) =>
+                  isActive ? "font-semibold text-blue-600" : ""
+                }
+              >
+                Checkout
+              </NavLink>
             </li>
           </ul>
         </nav>

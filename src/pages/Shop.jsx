@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ProductCard } from "../components/ProductCard";
+import { ProductCard } from "../shopComponents/ProductCard";
 import axios from "axios";
 
 export const Shop = () => {
